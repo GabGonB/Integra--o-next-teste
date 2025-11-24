@@ -11,7 +11,7 @@ describe("ListaTarefas", () => {
     render(<ListaTarefas initialTasks={tarefas} />);
 
     expect(screen.getByText(/Minhas Tarefas/i)).toBeInTheDocument();
-    expect(screen.getByText(/Fazer o Curso/i)).toBeInTheDocument();
-    expect(screen.getByText(/Fazer o Curso Novamente/i)).toBeInTheDocument();
+    expect(screen.getByText("Fazer o Curso")).toBeInTheDocument();
+    expect(screen.getByText("Fazer o Curso Novamente")).toBeInTheDocument();
   });
 });
