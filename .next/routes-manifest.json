@@ -22,13 +22,7 @@
   ],
   "headers": [],
   "rewrites": {
-    "beforeFiles": [
-      {
-        "source": "/Integra--o-next-teste//_next/:path+",
-        "destination": "/Integra--o-next-teste/_next/:path+",
-        "regex": "^/Integra--o-next-teste//_next(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))(?:/)?$"
-      }
-    ],
+    "beforeFiles": [],
     "afterFiles": [],
     "fallback": []
   },

@@ -1,4 +1,4 @@
-/* globals.css - estilos básicos para o projeto */
+
 :root{
   --bg: #0f172a;
   --card: #0b1220;
@@ -27,7 +27,7 @@ body{
   min-height:100vh;
 }
 
-/* Card */
+
 main{
   width:100%;
   max-width:720px;
@@ -38,19 +38,16 @@ main{
   border: 1px solid rgba(255,255,255,0.03);
 }
 
-/* Header */
 h1{
   margin:0 0 8px 0;
   font-size:1.5rem;
 }
 
-/* Contador */
 [aria-label="contador"]{
   margin: 0 0 16px 0;
   color:var(--muted);
 }
 
-/* Form */
 form[aria-label="form-nova-tarefa"]{
   display:flex;
   gap:var(--gap);
@@ -99,7 +96,7 @@ button:disabled{
   cursor:not-allowed;
 }
 
-/* Lista */
+
 ul{
   list-style:none;
   padding:0;
@@ -116,7 +113,7 @@ li{
   border:1px solid rgba(255,255,255,0.01);
 }
 
-/* Alert */
+
 [role="alert"]{
   margin-top:8px;
   color:var(--danger);
