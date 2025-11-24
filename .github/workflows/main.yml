@@ -20,7 +20,7 @@ jobs:
           node-version: "20"
           cache: "npm"
 
-      - name: Instalar Depende
+      - name: Instalar Dependencias
         run: npm ci
 
       - name: ESLint
