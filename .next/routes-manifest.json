@@ -2,8 +2,16 @@
   "version": 3,
   "pages404": true,
   "caseSensitive": false,
-  "basePath": "",
+  "basePath": "/Integra--o-next-teste",
   "redirects": [
+    {
+      "source": "/Integra--o-next-teste/",
+      "destination": "/Integra--o-next-teste",
+      "basePath": false,
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^/Integra--o-next-teste/$"
+    },
     {
       "source": "/:path+/",
       "destination": "/:path+",
@@ -14,7 +22,13 @@
   ],
   "headers": [],
   "rewrites": {
-    "beforeFiles": [],
+    "beforeFiles": [
+      {
+        "source": "/Integra--o-next-teste//_next/:path+",
+        "destination": "/Integra--o-next-teste/_next/:path+",
+        "regex": "^/Integra--o-next-teste//_next(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))(?:/)?$"
+      }
+    ],
     "afterFiles": [],
     "fallback": []
   },

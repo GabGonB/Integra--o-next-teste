@@ -13,7 +13,7 @@
     "typedRoutes": false,
     "distDir": ".next",
     "cleanDistDir": true,
-    "assetPrefix": "",
+    "assetPrefix": "/Integra--o-next-teste/",
     "cacheMaxMemorySize": 52428800,
     "configOrigin": "next.config.js",
     "useFileSystemPublicRoutes": true,
@@ -47,7 +47,7 @@
         256,
         384
       ],
-      "path": "/_next/image",
+      "path": "/Integra--o-next-teste/_next/image",
       "loader": "default",
       "loaderFile": "",
       "domains": [],
@@ -70,9 +70,9 @@
       "pagesBufferLength": 5
     },
     "amp": {
-      "canonicalBase": ""
+      "canonicalBase": "/Integra--o-next-teste"
     },
-    "basePath": "",
+    "basePath": "/Integra--o-next-teste",
     "sassOptions": {},
     "trailingSlash": false,
     "i18n": null,
