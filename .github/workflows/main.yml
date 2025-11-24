@@ -18,9 +18,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: "npm"
+          cache: "none"
 
-      - name: Instalar Depende
+      - name: Instalar Dependencias
         run: npm ci
 
       - name: ESLint
