@@ -1,27 +1,33 @@
-# Nome WorkFlow
-name: CI/CD
-# Quando o Pipeline Dispara
+name: CI
+
 on:
   push:
-    branches:
-      -main
-  workflow_dispatch:
-  
-jobs: 
-  build:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  ci:
     runs-on: ubuntu-latest
-    
+
     steps:
-      - name: Checkout do Código
-      - uses: actions/checkout@v5
+      - name: Checar Repositorio
+        uses: actions/checkout@v4
 
-      - name: Instalação Node
-      - uses: actions/setup-node@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "20"
+          cache: "npm"
 
-      - name: Instalação Dependências
-      - run: npm install
+      - name: Instalar Depende
+        run: npm ci
 
-      - name: Rodar Build
-      - run: npm run build
+      - name: ESLint
+        run: npm run lint
+
+      - name: Testes
+        run: npm run test
+
+      - name: Build
+        run: npm run build
