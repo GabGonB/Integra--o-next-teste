@@ -1,0 +1,27 @@
+# Nome WorkFlow
+name: CI/CD
+# Quando o Pipeline Dispara
+on:
+  push:
+    branches:
+      -main
+  workflow_dispatch:
+  
+jobs: 
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout do Código
+      - uses: actions/checkout@v5
+
+      - name: Instalação Node
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Instalação Dependências
+      - run: npm install
+
+      - name: Rodar Build
+      - run: npm run build
