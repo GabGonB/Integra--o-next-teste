@@ -2,11 +2,11 @@ import { render, screen } from '@testing-library/react';
 import Page from '@/app/page';
 
 describe('Página inicial', () => {
-  test('renderiza as tarefas iniciais', async () => {
-    const ui = await Page();
-    render(ui);
+test("Página inicial › renderiza as tarefas iniciais", () => {
+  render(<Page />);
+
     expect(screen.getByText(/Minhas Tarefas/i)).toBeInTheDocument();
-    expect(screen.getByText(/Estudar Next.js 15/i)).toBeInTheDocument();
-    expect(screen.getByText(/Escrever testes do formulário/i)).toBeInTheDocument();
-  });
+    expect(screen.getByText(/Fazer o Curso/i)).toBeInTheDocument();
+    expect(screen.getByText(/Fazer o Curso Novamente/i)).toBeInTheDocument();
+  }); 
 });
